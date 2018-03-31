@@ -1,0 +1,27 @@
+﻿<Window x:Class="ExcelTester.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExcelTester"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <StackPanel Orientation="Vertical" Margin="4">
+        <DockPanel Height="auto">
+            <Label Content="Excel:" Margin="4" Padding="4" DockPanel.Dock="Left"/>
+            <Button Name="b_openExcel" Content="Open Excel..." Margin="4" Padding="4" DockPanel.Dock="Right" Click="b_openExcel_Click"/>
+            <TextBox Name="txt_fileName" Margin="4" HorizontalAlignment="Stretch" TextWrapping="Wrap" VerticalAlignment="Center"/>
+        </DockPanel>
+        <DockPanel Height="auto">
+            <Label Content="Source sheet name:" Margin="4" Padding="4" DockPanel.Dock="Left"/>
+            <TextBox Name="txt_sourceSheetName" Text="Лист1" Margin="4" HorizontalAlignment="Stretch" TextWrapping="Wrap" VerticalAlignment="Center"/>
+        </DockPanel>
+        <DockPanel>
+            <Button Name="b_start" Click="b_start_Click" Content="Start" HorizontalAlignment="Center" Margin="4" Padding="4"/>
+        </DockPanel>
+        <DockPanel>
+            <Button Name="b_close" Click="b_close_Click" Content="Close Excel" HorizontalAlignment="Center" Margin="4" Padding="4"/>
+        </DockPanel>
+        <TextBlock Name="text_output" Text=""/>
+    </StackPanel>
+</Window>
